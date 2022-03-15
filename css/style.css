@@ -15,3 +15,130 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* body */
+body {
+  background-color: var(--main-BG);
+  font-family: "outfit";
+  font-size: 18px;
+  color: rgba(255, 255, 255, 60%);
+  padding: 1.25rem;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+/* container */
+.container {
+  background-color: var(--card-BG);
+  padding: 1.25rem;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 1rem;
+  animation-name: container;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition: ease-in-out;
+}
+.container ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.main-image {
+  border-radius: 1rem;
+}
+.container h1 {
+  margin: 1rem 0.5rem 0.5rem 0;
+  color: var(--White);
+  transition: ease-in-out 0.5s;
+}
+.container ul li:first-child {
+  color: var(--Cyan);
+}
+.container ul li {
+  display: flex;
+  align-items: center;
+}
+.container ul li img {
+  margin-right: 0.5rem;
+}
+.container .main-image {
+  position: relative;
+}
+.container .main-image div {
+  position: absolute;
+  background-color: hsl(178, 100%, 50%, 50%);
+  top: 0;
+  width: 100%;
+  height: calc(100% - 4px);
+  z-index: 999;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+.container .main-image div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .main-image div:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+/* second div */
+.creation {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.creation img {
+  width: 3.6rem;
+  border: 2px solid var(--White);
+  border-radius: 50%;
+  margin-right: 11px;
+  margin-top: 0.9rem;
+}
+span {
+  margin-left: 4px;
+  transition: ease-in-out 0.5s;
+}
+/* hover */
+span:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+.container h1:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+/* media */
+@media (min-width: 500px) {
+  .container {
+    width: 450px;
+    margin: 1rem auto;
+  }
+}
+/* attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* animation */
+@keyframes container {
+  0% {
+    box-shadow: 0px 0px 19px 5px #0fb3ff;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0px 0px 19px 5px #0fb3ff;
+  }
+}
